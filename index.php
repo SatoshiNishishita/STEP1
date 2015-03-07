@@ -1,5 +1,6 @@
+
 <?php
-session_start();
+
 
 //DBに接続
 require('dbconnect.php');
@@ -15,21 +16,13 @@ $selectdb = mysql_select_db($DBNAME, $db);
 
 ?>
 
-
-
-<?php
+<?php			
 
 //投稿を記録する
-if(!empty($_POST)){
-	if($_POST['comment'] != ''){
-			$name= htmlspecialchars($_POST['name']);
-			$comment = htmlspecialchars($_POST['comment']);
-			
-			$data_insert = ("INSERT INTO step1_post(name,message) VALUES( '$name',  '$comment')");
-			mysql_query($data_insert,$db); 
-			
-			}
-}
+$name= htmlspecialchars($_POST['name']);
+$comment = htmlspecialchars($_POST['comment']);
+$data_insert = ("INSERT INTO step1_post(name,message) VALUES( '$name',  '$comment')");
+mysql_query($data_insert,$db); 
 
 ?>
 
