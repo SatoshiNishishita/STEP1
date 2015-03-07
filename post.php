@@ -26,5 +26,9 @@
 
 </div>
 
+<footer>
+	<h4 class="text-center">&copy;teamラボ,オンラインスキルアップ課題</h4>
+</footer>
+
 </body>
 </html>
